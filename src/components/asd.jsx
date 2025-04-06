@@ -1,13 +1,9 @@
-
 import React, { useEffect, useState, useRef } from 'react';
 import Draggable from 'react-draggable';
-import tail from '../assets/images/tigerbody.png'; 
-import head from '../assets/images/tiger-split.png';
-import headshad from '../assets/images/tigershad.png';
-import deerhead from '../assets/images/cheetahhead.png';
+import levelsData from '../assets/levelsData.json';
 
-const Level3 = ({ onNext, onPrev,updateTrialCount,throwConfetti }) => {
-
+const CombinedLevel = ({ onNext, onPrev, updateTrialCount, throwConfetti, onLevelComplete }) => {
+  const [currentLevel, setCurrentLevel] = useState(0);
   const [trialCount, setTrialCount] = useState(0);
   const [headPosition, setHeadPosition] = useState({ x: 1000, y: 280 });
   const [deerPosition, setDeerPosition] = useState({ x: 1000, y: 20 });
@@ -68,12 +64,13 @@ const Level3 = ({ onNext, onPrev,updateTrialCount,throwConfetti }) => {
     const scale = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
     const newSize = { width: 400 * scale, height: 400 * scale };
     setImageSize(newSize);
-    setTailPosition({ x: 589 * scale, y: 110 * scale });
-    setHeadShadowPosition({ x: 200 * scale, y: 100 * scale });
-    setHeadPosition({ x: 1000 * scale, y: 400 * scale });
-    setDeerPosition({ x: 1000 * scale, y: 20 * scale });
-    originalDeerPositionRef.current = { x: 1000 * scale, y: 20 * scale };
-    setScale(scale); // Set the scale for dynamic adjustments
+    const levelData = levelsData[currentLevel];
+    setTailPosition({ x: levelData.tailPosition.x * scale, y: levelData.tailPosition.y * scale });
+    setHeadShadowPosition({ x: levelData.headShadowPosition.x * scale, y: levelData.headShadowPosition.y * scale });
+    setHeadPosition({ x: levelData.headPosition.x * scale, y: levelData.headPosition.y * scale });
+    setDeerPosition({ x: levelData.deerPosition.x * scale, y: levelData.deerPosition.y * scale });
+    originalDeerPositionRef.current = { x: levelData.deerPosition.x * scale, y: levelData.deerPosition.y * scale };
+    setScale(scale);
   };
 
   useEffect(() => {
@@ -83,18 +80,34 @@ const Level3 = ({ onNext, onPrev,updateTrialCount,throwConfetti }) => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [currentLevel]);
 
-  const commonStyle = {position: 'absolute',width: `${imageSize.width}px`,height: `${imageSize.height}px`,backgroundRepeat: 'no-repeat',backgroundSize: 'contain',};
+  useEffect(() => {
+    if (currentLevel === levelsData.length) {
+      onLevelComplete();
+    }
+  }, [currentLevel]);
+
+  const commonStyle = {
+    position: 'absolute',
+    width: `${imageSize.width}px`,
+    height: `${imageSize.height}px`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'contain',
+  };
+
+  if (currentLevel >= levelsData.length) {
+    return null; // All levels completed
+  }
+
+  const levelData = levelsData[currentLevel];
 
   return (
     <div style={{ position: 'relative', backgroundColor: '#D8F7F2', height: 'calc(100vh - 100px)', zIndex: 1 }}>
       <div
         style={{
           ...commonStyle,
-          width: `${imageSize.width + 35}px`,
-          height: `${imageSize.height}px`,
-          backgroundImage: `url(${tail})`,
+          backgroundImage: `url(${require(`../assets/images/${levelData.tail}`)})`,
           left: `${tailPosition.x}px`,
           top: `${tailPosition.y - 4}px`,
         }}
@@ -102,44 +115,47 @@ const Level3 = ({ onNext, onPrev,updateTrialCount,throwConfetti }) => {
       <div
         style={{
           ...commonStyle,
-          backgroundImage: `url(${headshad})`,
-          
+          backgroundImage: `url(${require(`../assets/images/${levelData.headShad}`)})`,
           left: `${headShadowPosition.x}px`,
           top: `${headShadowPosition.y}px`,
         }}
       />
-      <Draggable position={headPosition} onStop={onStopHead} nodeRef={headRef}>
+      <Draggable position={headPosition} onStop={onStopHead} bounds="parent">
         <div
           ref={headRef}
           style={{
             ...commonStyle,
-            backgroundImage: `url(${head})`,
-           
+            backgroundImage: `url(${require(`../assets/images/${levelData.head}`)})`,
+            cursor: 'grab',
           }}
         />
       </Draggable>
-      <Draggable position={deerPosition} onStop={onStopDeer} nodeRef={deerRef}>
+      <Draggable position={deerPosition} onStop={onStopDeer} bounds="parent">
         <div
           ref={deerRef}
           style={{
             ...commonStyle,
-            backgroundImage: `url(${deerhead})`,
+            backgroundImage: `url(${require(`../assets/images/${levelData.deerHead}`)})`,
+            cursor: 'grab',
           }}
         />
       </Draggable>
-      <div
-        style={{
-          position: 'absolute',
-          top: `${150 * scale}px`,
-          right: '10px',
-          fontSize: `${50 * scale}px`,
-          zIndex: 2
-        }}
+      <button
+        className="button-74"
+        onClick={() => setCurrentLevel((prevLevel) => Math.max(prevLevel - 1, 0))}
+        style={{ position: 'absolute', left: '70px', bottom: '30px' }}
       >
-        Trials: {trialCount}
-      </div>
+        Previous Level
+      </button>
+      <button
+        className="button-74"
+        onClick={() => setCurrentLevel((prevLevel) => Math.min(prevLevel + 1, levelsData.length - 1))}
+        style={{ position: 'absolute', right: '70px', bottom: '30px' }}
+      >
+        Next Level
+      </button>
     </div>
   );
 };
 
-export default Level3;
+export default CombinedLevel;

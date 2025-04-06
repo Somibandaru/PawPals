@@ -1,0 +1,201 @@
+{
+    "session1": [
+      {
+        "tail": "tigerbody.png",
+        "head": "tiger-split.png",
+        "headShad": "tigershad.png",
+        "deerHead": "cheetahhead.png",
+        "tailPosition": { "x": 591, "y": 130 },
+        "headShadowPosition": { "x": 200, "y": 100 },
+        "headPosition": { "x": 1000, "y": 280 },
+        "deerPosition": { "x": 1000, "y": 20 }
+      },
+      {
+        "tail": "goat.png",
+        "head": "goattail.png",
+        "headShad": "goatshad.png",
+        "deerHead": "sheep.png",
+        "tailPosition": { "x": 198.25, "y": 100 },
+        "headShadowPosition": { "x": 409, "y": 95 },
+        "headPosition": { "x": 1000, "y": 330 },
+        "deerPosition": { "x": 1000, "y": 20 }
+      },
+      {
+        "tail": "beartail.png",
+        "head": "bearhead.png",
+        "headShad": "bearshad.png",
+        "deerHead": "pbearhead.png",
+        "tailPosition": { "x": 500, "y": 100 },
+        "headShadowPosition": { "x": 182, "y": 100 },
+        "headPosition": { "x": 1000, "y": 20 },
+        "deerPosition": { "x": 1000, "y": 400 }
+      },
+      {
+        "tail": "penghead.png",
+        "head": "pengtail.png",
+        "headShad": "pengshad.png",
+        "deerHead": "pengtail2.png",
+        "tailPosition": { "x": 200, "y": 100 },
+        "headShadowPosition": { "x": 200, "y": 439 },
+        "headPosition": { "x": 800, "y": 100 },
+        "deerPosition": { "x": 800, "y": 550 }
+      },
+      {
+        "tail": "pighead.png",
+        "head": "pigtail.png",
+        "headShad": "pigshad.png",
+        "deerHead": "eagletail.png",
+        "tailPosition": { "x": 591, "y": 130 },
+        "headShadowPosition": { "x": 200, "y": 100 },
+        "headPosition": { "x": 1000, "y": 280 },
+        "deerPosition": { "x": 1000, "y": 20 }
+      },
+      {
+        "tail": "eaglehead.png",
+        "head": "eagletail.png",
+        "headShad": "eagleshad.png",
+        "deerHead": "swantail.png",
+        "tailPosition": { "x": 198.25, "y": 100 },
+        "headShadowPosition": { "x": 409, "y": 95 },
+        "headPosition": { "x": 1000, "y": 330 },
+        "deerPosition": { "x": 1000, "y": 20 }
+      }
+    ],
+    "session2": [
+      {
+        "tail": "henhead.png",
+        "head": "hentail.png",
+        "headShad": "henshad.png",
+        "deerHead1": "sealtail.png",
+        "deerHead2": "beartail.png",
+        "tailPosition": { "x": 200, "y": 200 },
+        "headPosition": { "x": 1300, "y": 200 },
+        "headShadowPosition": { "x": 401, "y": 200 },
+        "deerPosition1": { "x": 1000, "y": 400 },
+        "deerPosition2": { "x": 1200, "y": 400 }
+      },
+      {
+        "tail": "henhead.png",
+        "head": "hentail.png",
+        "headShad": "henshad.png",
+        "deerHead1": "sealtail.png",
+        "deerHead2": "beartail.png",
+        "tailPosition": { "x": 200, "y": 200 },
+        "headPosition": { "x": 1300, "y": 200 },
+        "headShadowPosition": { "x": 401, "y": 200 },
+        "deerPosition1": { "x": 1000, "y": 400 },
+        "deerPosition2": { "x": 1200, "y": 400 }
+      },
+      {
+        "tail": "henhead.png",
+        "head": "hentail.png",
+        "headShad": "henshad.png",
+        "deerHead1": "sealtail.png",
+        "deerHead2": "beartail.png",
+        "tailPosition": { "x": 200, "y": 200 },
+        "headPosition": { "x": 1300, "y": 200 },
+        "headShadowPosition": { "x": 401, "y": 200 },
+        "deerPosition1": { "x": 1000, "y": 400 },
+        "deerPosition2": { "x": 1200, "y": 400 }
+      },
+      {
+        "tail": "henhead.png",
+        "head": "hentail.png",
+        "headShad": "henshad.png",
+        "deerHead1": "sealtail.png",
+        "deerHead2": "beartail.png",
+        "tailPosition": { "x": 200, "y": 200 },
+        "headPosition": { "x": 1300, "y": 200 },
+        "headShadowPosition": { "x": 401, "y": 200 },
+        "deerPosition1": { "x": 1000, "y": 400 },
+        "deerPosition2": { "x": 1200, "y": 400 }
+      },
+      {
+        "tail": "henhead.png",
+        "head": "hentail.png",
+        "headShad": "henshad.png",
+        "deerHead1": "sealtail.png",
+        "deerHead2": "beartail.png",
+        "tailPosition": { "x": 200, "y": 200 },
+        "headPosition": { "x": 1300, "y": 200 },
+        "headShadowPosition": { "x": 401, "y": 200 },
+        "deerPosition1": { "x": 1000, "y": 400 },
+        "deerPosition2": { "x": 1200, "y": 400 }
+      },
+      {
+        "tail": "henhead.png",
+        "head": "hentail.png",
+        "headShad": "henshad.png",
+        "deerHead1": "sealtail.png",
+        "deerHead2": "beartail.png",
+        "tailPosition": { "x": 200, "y": 200 },
+        "headPosition": { "x": 1300, "y": 200 },
+        "headShadowPosition": { "x": 401, "y": 200 },
+        "deerPosition1": { "x": 1000, "y": 400 },
+        "deerPosition2": { "x": 1200, "y": 400 }
+      }
+    ],
+    "session3": [
+      {
+        "tail": "henhead.png",
+        "head": "hentail.png",
+        "headShad": "henshad.png",
+        "deerHead1": "sealtail.png",
+        "deerHead2": "beartail.png",
+        "tailPosition": { "x": 200, "y": 200 },
+        "headPosition": { "x": 1300, "y": 200 },
+        "headShadowPosition": { "x": 401, "y": 200 },
+        "deerPosition1": { "x": 1000, "y": 400 },
+        "deerPosition2": { "x": 1200, "y": 400 }
+      },
+      {
+        "tail": "henhead.png",
+        "head": "hentail.png",
+        "headShad": "henshad.png",
+        "deerHead1": "sealtail.png",
+        "deerHead2": "beartail.png",
+        "tailPosition": { "x": 200, "y": 200 },
+        "headPosition": { "x": 1300, "y": 200 },
+        "headShadowPosition": { "x": 401, "y": 200 },
+        "deerPosition1": { "x": 1000, "y": 400 },
+        "deerPosition2": { "x": 1200, "y": 400 }
+      },
+      {
+        "tail": "henhead.png",
+        "head": "hentail.png",
+        "headShad": "henshad.png",
+        "deerHead1": "sealtail.png",
+        "deerHead2": "beartail.png",
+        "tailPosition": { "x": 200, "y": 200 },
+        "headPosition": { "x": 1300, "y": 200 },
+        "headShadowPosition": { "x": 401, "y": 200 },
+        "deerPosition1": { "x": 1000, "y": 400 },
+        "deerPosition2": { "x": 1200, "y": 400 }
+      },
+      {
+        "tail": "henhead.png",
+        "head": "hentail.png",
+        "headShad": "henshad.png",
+        "deerHead1": "sealtail.png",
+        "deerHead2": "beartail.png",
+        "tailPosition": { "x": 200, "y": 200 },
+        "headPosition": { "x": 1300, "y": 200 },
+        "headShadowPosition": { "x": 401, "y": 200 },
+        "deerPosition1": { "x": 1000, "y": 400 },
+        "deerPosition2": { "x": 1200, "y": 400 }
+      },
+      {
+        "tail": "henhead.png",
+        "head": "hentail.png",
+        "headShad": "henshad.png",
+        "deerHead1": "sealtail.png",
+        "deerHead2": "beartail.png",
+        "tailPosition": { "x": 200, "y": 200 },
+        "headPosition": { "x": 1300, "y": 200 },
+        "headShadowPosition": { "x": 401, "y": 200 },
+        "deerPosition1": { "x": 1000, "y": 400 },
+        "deerPosition2": { "x": 1200, "y": 400 }
+      }
+    ]
+  }
+  
